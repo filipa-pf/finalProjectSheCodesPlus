@@ -57,6 +57,9 @@ function showWeather(response) {
     response.data.main.temp
   );
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#condition").innerHTML = response.data.weather[0].description;
+  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  console.log(response);
 }
 
 function showCity(event) {
