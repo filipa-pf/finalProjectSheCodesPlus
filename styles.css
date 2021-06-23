@@ -113,7 +113,6 @@ p.forecast {
 .temp{
   text-align: left;
   position: relative;
-  left: 80px;
 }
 .temp strong{
   color: #5c6268;
@@ -126,4 +125,7 @@ p.forecast {
   position: relative;
   bottom: 33px;
   font-size: 12px;
+}
+#sun{
+  font-size: 20px;
 }
