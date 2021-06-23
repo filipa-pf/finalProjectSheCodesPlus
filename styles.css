@@ -101,3 +101,11 @@ p.forecast {
   border-right-color: #5c6268;
   border: 1px solid grey;
 }
+.card {
+  text-align: center;
+}
+#git {
+  display: block;
+  text-align: left;
+  font-size: 12px;
+}
