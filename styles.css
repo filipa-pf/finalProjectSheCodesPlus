@@ -1,0 +1,103 @@
+body {
+  text-align: center !important;
+}
+
+#input-city {
+  max-width: 300px;
+}
+
+.detailed-btn {
+  margin: 10px;
+  background: d9f0f7;
+  border-color: antiquewhite;
+  font-size: 10px;
+}
+
+.lbl-color {
+  color: #5c6268;
+}
+
+.input-max {
+  width: 50%;
+  margin: 0 auto;
+  background: transparent;
+}
+
+.container {
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20px;
+  max-width: 720px;
+}
+h2 {
+  font-size: 13px;
+  color: rgba(119, 108, 108, 0.534);
+}
+h3 {
+  font-size: 32px;
+  color: #8ea5b9;
+}
+.time-n-date {
+  padding: 10px;
+}
+.city {
+  font-size: 35px;
+  color: #5c6268;
+}
+.city::before,
+::after {
+  box-sizing: border-box;
+}
+.units {
+  position: relative;
+  bottom: 60px;
+  right: -70px;
+  font-size: 10px;
+  color: #5c6268;
+}
+
+.temp {
+  font-size: 50px;
+  color: #5c6268;
+}
+
+.sun {
+  border: transparent;
+  width: 60px;
+  position: relative;
+  bottom: 5px;
+  right: -10px;
+}
+p.forecast {
+  text-align: left;
+  color: lightgray;
+}
+.details {
+  color: #5c6268;
+  font-size: 10px;
+}
+.btn2 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.card-img {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.forecast-day {
+  color: rgb(141, 139, 139);
+  font-size: 12px;
+}
+.forecast-temp {
+  color: rgb(141, 139, 139);
+  font-size: 20px;
+}
+.forecast-temp-range {
+  color: rgb(141, 139, 139);
+  font-size: 10px;
+}
+.col-boder {
+  border-right-color: #5c6268;
+  border: 1px solid grey;
+}

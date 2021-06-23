@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="card-body card-img">
+          <form id="city-form">
+            <div class="form-group">
+              <label class="lbl-color">Enter City</label>
+              <input id="input-city" type="text" class="form-control input-max" />
+              <button type="submit" class="btn btn-light detailed-btn" id="btn1">
+                Check Weather!
+              </button>
+            </form>
+              <p id="city-display"></p>
+              <hr>
+            </div>
+            <div class="time-n-date">
+            <h2>Wed, 28 May</h2>
+            <h3>18:32</h3>
+            <div class="row">
+              
+              <div class="col-6">
+                  <form id="searched-city">
+              <span class="col city" id="placeInPage">
+                Lisbon
+              </span>
+              <div>
+              <button type="submit" class="btn btn-light detailed-btn btn2" id="btn2">
+                Current City Weather!
+              </button>
+            </form>
+            </div>
+         
+            </div>
+            <div class="col-6 temp-info">
+              <div class="temp">
+                  <span id="showTemperature">21</span> <span>º</span>
+          
+              </div>
+              <div class="details">
+                  Humidity:<span id="humidity">
+                  12 
+                  </span>%
+
+              </div>
+          </div>
+          </div>
+              <p class="forecast">
+                5 Day Forecast
+              </p>
+              <hr>
+              <div class="row forecast-day">        
+                <div class="col border-right">THU</div>  
+                <div class="col border-right">FRI</div> 
+                <div class="col border-right">SAT</div> 
+                <div class="col border-right">SUN</div> 
+                <div class="col">MON</div> 
+              </div>
+              <div class="row forecast-temp">        
+                  <div class="col border-right">25º</div>  
+                  <div class="col border-right">21º</div> 
+                  <div class="col border-right">23º</div> 
+                  <div class="col border-right">22º</div> 
+                  <div class="col">23º</div> 
+                </div>
+                <div class="row forecast-temp-range">        
+                    <div class="col border-right">22º-27º</div>  
+                    <div class="col border-right">19º-23ª</div> 
+                    <div class="col border-right">20º-27º</div> 
+                    <div class="col border-right">18º-24º</div> 
+                    <div class="col">17º-25º</div> 
+                  </div>
+          
+        </div>
+      </div>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
