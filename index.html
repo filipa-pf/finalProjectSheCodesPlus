@@ -3,13 +3,14 @@
   <head>
     <title>Weather</title>
     <meta charset="UTF-8" />
-    <script src="https://kit.fontawesome.com/40e1144387.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
@@ -35,7 +36,7 @@
             <h3>18:32</h3>
             <div class="row">
               
-              <div class="col-4">
+              <div class="col-sm-4">
                   <form id="searched-city">
               <span class="col city" id="placeInPage">
                 Lisbon
@@ -48,10 +49,10 @@
             </div>
          
             </div>
-            <div class="col-4">
-              <i class="fa-solid fa-sun"></i>
+            <div class="col-sm-4">
+             <i id="sun" class="far fa-sun"></i>
             </div>
-            <div class="col-4 temp-info">
+            <div class="col-sm-4 temp-info">
               <div class="temp">
                   <strong id="showTemperature">21</strong><span class="units"><a href="#">Cº</a> | <a href="#">Fº</a></span>
                      <ul class="details">
