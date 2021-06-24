@@ -1,5 +1,5 @@
 body {
-  text-align: center !important;
+  text-align: center;
 }
 
 #input-city {
@@ -98,42 +98,50 @@ p.forecast {
   text-align: left;
   font-size: 12px;
 }
-.symbol{
+.symbol {
   font-size: 15px;
 }
 
-.temp strong{
+.temp strong {
   color: #5c6268;
   font-size: 50px;
   line-height: 1;
   font-weight: 400;
-  
 }
-.units{
+.units {
   position: relative;
   bottom: 33px;
   font-size: 12px;
 }
-#sun{
+#sun {
   font-size: 50px;
-  margin:30px;
+  margin: 30px;
 }
-.temp-info{
+.temp-info {
   margin-top: 15px;
 }
-.temp .active{
+.temp .active {
   color: #5c6268;
-  cursor: default; 
+  cursor: default;
 }
-.temp .active:hover{
- text-decoration: none; 
+.temp .active:hover {
+  text-decoration: none;
 }
-#icon-forecast{
+#icon-forecast {
   max-width: 50px;
 }
-.current-temperature{
-  font-size: 25px !important;
+.current-temperature {
+  font-size: 22px !important;
+  color: #868b8f;
 }
-.weather-forecast-max{
-  color: #5c6268;
+.weather-forecast-max {
+  color: #4b4e50;
+  font-size: 11px;
+}
+.weather-forecast-min {
+  color: #868b8f;
+  font-size: 11px;
+}
+.week-day {
+  font-size: 11px !important;
 }

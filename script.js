@@ -51,6 +51,33 @@ h2.innerHTML = formatDate(now);
 let h3 = document.querySelector("h3");
 h3.innerHTML = formatHours(now);
 
+function showForecast() {
+  let forecastElement = document.querySelector("#forecastElement");
+  let days = ["THU", "FRI", "SAT", "SUN", "MON"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML = forecastHTML + `
+              <div class="col border-right">
+                <div class="week-day">
+                ${day}
+                </div>
+                <div class="current-temperature">25º</div>
+                  <div><img src="http://openweathermap.org/img/wn/10d@2x.png"
+                      alt="weather-symbol"
+                      id="icon-forecast"/>
+                  </div>
+                  <div>
+                    <span class="weather-forecast-min">22º-</span>
+                    <span class="weather-forecast-max">27º</span>
+                  </div>
+              </div>`;       
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   document.querySelector("#placeInPage").innerHTML = response.data.name;
   document.querySelector("#showTemperature").innerHTML = Math.round(
@@ -126,3 +153,4 @@ celsiusLink.addEventListener("click", showCelsius);
 let celsiusTemperature = null;
 
 defaultCity("London");
+showForecast();
