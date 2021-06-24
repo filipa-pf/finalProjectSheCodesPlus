@@ -61,7 +61,8 @@ function showWeather(response) {
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   let iconElement = document.querySelector("#icon");
   iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  console.log(response);
+
+  celsiusTemperature = response.data.main.temp;
 }
 
 function showCity(event) {
@@ -90,10 +91,38 @@ function showCurrentWeather(event) {
   navigator.geolocation.getCurrentPosition(getCurrent);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#showTemperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9 / 5) + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#showTemperature");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("active");
+}
+
 let currentCityWeather = document.querySelector("#btn2");
 currentCityWeather.addEventListener("click", showCurrentWeather);
 
 let searchedCity = document.querySelector("#city-form");
 searchedCity.addEventListener("submit", showCity);
+
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsius);
+
+
+let celsiusTemperature = null;
 
 defaultCity("London");

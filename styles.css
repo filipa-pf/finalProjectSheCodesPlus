@@ -122,3 +122,10 @@ p.forecast {
 .temp-info{
   margin-top: 15px;
 }
+.temp .active{
+  color: #5c6268;
+  cursor: default; 
+}
+.temp .active:hover{
+ text-decoration: none; 
+}
