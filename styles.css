@@ -51,7 +51,6 @@ h3 {
   box-sizing: border-box;
 }
 
-
 .temp {
   font-size: 12px;
   color: #5c6268;
@@ -128,4 +127,13 @@ p.forecast {
 }
 .temp .active:hover{
  text-decoration: none; 
+}
+#icon-forecast{
+  max-width: 50px;
+}
+.current-temperature{
+  font-size: 25px !important;
+}
+.weather-forecast-max{
+  color: #5c6268;
 }
