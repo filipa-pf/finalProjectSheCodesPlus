@@ -51,29 +51,40 @@ h2.innerHTML = formatDate(now);
 let h3 = document.querySelector("h3");
 h3.innerHTML = formatHours(now);
 
+function formatWeekDay(timeStamp){
+let date = new Date(timeStamp * 1000);
+let day = date.getDay();
+let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]
+
+return days[day];
+}
+
 function showForecast(response) {
-  console.log(response.data)
+  let forecast = response.data.daily;
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecastElement");
-  let days = ["THU", "FRI", "SAT", "SUN", "MON"];
+  
   let forecastHTML = `<div class="row">`;
 
-  days.forEach(function (day) {
-    forecastHTML = forecastHTML + `
-              <div class="col border-right">
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6)
+    {forecastHTML = forecastHTML + `
+              <div class="col">
                 <div class="week-day">
-                ${day}
+                ${formatWeekDay(forecastDay.dt)}
                 </div>
-                <div class="current-temperature">25º</div>
-                  <div><img src="http://openweathermap.org/img/wn/10d@2x.png"
+                <div class="current-temperature">${Math.round(forecastDay.temp.day)}º</div>
+                  <div><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                       alt="weather-symbol"
                       id="icon-forecast"/>
                   </div>
                   <div>
-                    <span class="weather-forecast-min">22º-</span>
-                    <span class="weather-forecast-max">27º</span>
+                    <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}º-</span><span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}º</span>
                   </div>
               </div>`;       
-  });
+    }
+  
+            });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
@@ -166,4 +177,3 @@ celsiusLink.addEventListener("click", showCelsius);
 let celsiusTemperature = null;
 
 defaultCity("London");
-showForecast();
