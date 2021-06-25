@@ -145,3 +145,6 @@ p.forecast {
 .week-day {
   font-size: 11px !important;
 }
+#forecast {
+  text-align: left !important;
+}
