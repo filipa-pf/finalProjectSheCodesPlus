@@ -73,13 +73,13 @@ function showForecast(response) {
                 <div class="week-day">
                 ${formatWeekDay(forecastDay.dt)}
                 </div>
-                <div class="current-temperature">${Math.round(forecastDay.temp.day)}º</div>
+                
                   <div><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
                       alt="weather-symbol"
                       id="icon-forecast"/>
                   </div>
                   <div>
-                    <span class="weather-forecast-min">${Math.round(forecastDay.temp.min)}º-</span><span class="weather-forecast-max">${Math.round(forecastDay.temp.max)}º</span>
+                    <span id="forecast-temp-min" class="weather-forecast-min">${Math.round(forecastDay.temp.min)}º-</span><span id="forecast-temp-max" class="weather-forecast-max">${Math.round(forecastDay.temp.max)}º</span>
                   </div>
               </div>`;       
     }
